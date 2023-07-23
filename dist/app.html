@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./app.css">
+
+        <style>
+            #alert1, #alert2 {
+                font-weight: bold;
+                color: #ff0000;
+            }
+
+            #download1, #download2 {
+                width: 240px;
+                height: 40px;
+                border: 2px dashed #000;
+                text-align: center;
+                text-decoration: none;
+                color: #000;
+                background-color: #fcf404;
+                border-radius: 4px;
+                font-size: 20pt;
+            }
+
+            a#download:visited {
+                color: #000;
+            }
+            #dl {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0px 0px 5px 5px;
+            }
+
+            a#asd {
+                width: 120px;
+                height: 20px;
+                border: 2px dashed #000;
+                text-align: center;
+                text-decoration: none;
+                color: #000;
+                background-color: #fcf404;
+                border-radius: 4px;
+                cursor:pointer;
+            }
+
+            .tub {
+                z-index: 100;
+                width: 210px;
+                height: 40px;
+                text-align: center;
+                text-decoration: none;
+                color: #fff;
+                background-color: #acffff;
+                border-radius: 4px 4px 0px 0px;
+                border-bottom: none;
+                cursor:pointer;
+                padding: 10px 15px 5px 15px;
+
+                text-shadow: 2px 2px 10px #3e585d ,
+                -2px 2px 10px #3e585d ,
+                2px -2px 10px #3e585d ,
+                -2px -2px 10px #3e585d;
+            }
+
+            .tub-unactive {
+                z-index: 100;
+                width: 210px;
+                height: 40px;
+                text-align: center;
+                text-decoration: none;
+                color: #fff;
+                background-color: #296988;
+                border-radius: 4px 4px 0px 0px;
+                border-bottom: none;
+                cursor:pointer;
+                padding: 10px 15px 5px 15px;
+
+                text-shadow: 2px 2px 10px #3e585d ,
+                -2px 2px 10px #3e585d ,
+                2px -2px 10px #3e585d ,
+                -2px -2px 10px #3e585d;
+            }
+
+            #menu1, #menu2 {
+                z-index: 10;
+                background-color: #acffff;
+                height: 400px;
+            }
+            #menu2 {
+                margin-top: -400px;
+            }
+
+            .unactivemenu {
+                visibility: hidden;
+            }
+            .activemenu {
+                visibility: visible;
+            }
+
+            #rangem1, #rangem2 {
+                display: grid;
+                grid-template-columns: 50px 450px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#!" class="tub" id="tub1">デフォルト</a>
+        <a href="#!" class="tub-unactive" id="tub2">デザイン</a>
+        <div id="menu1" class="actuvemenu">
+            <input id="input1">
+            <button id="jenerate">ジェネレート</button>
+            <label>QRコード<input type="color" id="code1" value="#000000"></label>
+            <label>背景<input type="color" id="back1" value="#ffffff"></label>
+            <select id="format1">
+                <optgroup label="ラスター形式">
+                    <option value="png" selected>png(おすすめ)</option>
+                    <option value="jpeg">jpeg</option>
+                </optgroup>
+                <optgroup label="ベクター形式">
+                    <option value="svg">svg</option>
+                    <option value="eps">eps</option>
+                </optgroup>
+            </select>
+            <br>
+            <div id="alert1"></div>
+            <br>
+            <div id="rangem1">
+                <div id="rangeres1">a</div>
+                <input id="range1" type="range" min="100" max="600" step="10" value="70" style="--c: red;--l: 4px;">
+            </div>
+            <div id="dl">
+                <canvas id="canvas1" width="300" height="300" crossOrigin="anonymous" style="padding-left: 10px;"></canvas>
+                <a href="" download="QR.png" id="download1" style="display: none;">ダウンロード</a>
+            </div>
+        </div>
+
+
+        <div id="menu2" class="unactivemenu">
+            <div style="color: #ff0000;">サーバーを介していないので、CORS制限の関係で想定通りの動作はしません。<br>クロスオリジンを無効に設定し、生成を行うとコンソールにURLが表示されます。<br>ダウンロードボタンには画像が含まれない状態のQRコードが設定されています。</div>
+            <br>
+            <input id="input2">
+            <button id="icon">作成</button>
+            <label>QRコード<input type="color" id="code2" value="#000000"></label>
+            <label>背景<input type="color" id="back2" value="#ffffff"></label>
+            <select id="format2">
+                    <option value="png" selected>png(おすすめ)</option>
+                    <option value="jpeg">jpeg</option>
+            </select>
+            <br>
+            <div id="alert2"></div>
+            <br>
+            <div id="rangem2">
+                <div id="rangeres2">a</div>
+                <input id="range2" type="range" min="100" max="600" step="10" value="70" style="--c: red;--l: 4px;">
+            </div>
+            <div id="dl">
+                <canvas id="canvas2" width="300" height="300" crossOrigin="anonymous" style="padding-left: 10px;"></canvas>
+                <a href="" download="QR.png" id="download2" style="display: none;">ダウンロード</a>
+            </div>
+        </div>
+
+        <input id="filetest" type="file" accept="image/*">
+        <button id="filetrance">asd</button>
+        <canvas id="qrfile"></canvas>
+        <script src="app.js"></script>
+    </body>
+</html>

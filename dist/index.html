@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <style>
+	body {
+	max-width: 600px;
+	margin: 0 auto;
+	}
+	#a,#b,#c,#d,#e {
+		display: grid;
+		grid-template-columns: 150px 350px;
+	}
+	
+      .swiper {
+		width: 300px;
+		height: 150px;
+	}
+
+	#button {
+		width: 160px;
+		height: 40px;
+		display: block;
+  		margin: auto;
+		border: none;
+		background-color: blue;
+		color: white;
+	}
+
+	#tit {
+		font-weight: bold;
+		text-align: center;
+	}
+
+	#basic_name,#basic_email,#basic_password,#basic_age,#address {
+		width: 350px;
+	}
+
+	.bace {
+		display: grid;
+		grid-auto-rows: 20px;
+		row-gap: 70px;
+
+		position:absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.form {
+		position: relative;
+		background-color: #e4e4e4;
+		height: 600px;
+	}
+
+	#swip-con {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.swiper-slide {
+		position: relative;
+	}
+
+	#asdf {
+		position:absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.title {
+		text-align: center;
+	}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+	<div id="swip-con">
+		<div>
+			<div class="title" id="swip1tit">ウーパールーパー</div>
+			<!-- swiper1 -->
+			<div class="swiper slider1">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide"><img id="asdf" src="./u-pa-ru-pa-_leucistic.png"></div>
+				<div class="swiper-slide"><img id="asdf" src="./tokage_red_headed_rock_agama.png"></div>
+				<div class="swiper-slide"><img id="asdf" src="./kodai_umisasori.png" width="200" height="200"></div>
+				...
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+
+			<div id="swiper1r" style="text-align: center;">スライド1を表示しています</div>
+		</div>
+
+
+		<div>
+			<div class="title" id="swip2tit">サカバンバスピス</div>
+			<!-- swiper2 -->
+			<div class="swiper slider2">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide"><img id="asdf" src="./kodai_sacabambaspis.png"></div>
+				<div class="swiper-slide"><img id="asdf" src="./frog_hikigaeru.png"></div>
+				<div class="swiper-slide"><img id="asdf" src="./frog_budgett_kaeru.png"></div>
+				...
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+
+			<div id="swiper2r" style="text-align: center;">スライド4を表示しています</div>
+		</div>
+	</div>
+
+
+<div class="form">
+	<form id="basic_form">
+		<div class="bace">
+			<div id="a">
+				<p id="tit">名前</p>
+				<input name="name" id="basic_name" type="text" placeholder="名前を入力してください"/>
+				<div></div>
+			</div>
+			<div id="b">
+				<p id="tit">email</p>
+				<input name="email" id="basic_email" type="text" placeholder="メールアドレスを入力してください" />
+				<div></div>
+			</div>
+			<div id="c">
+				<p id="tit">パスワード</p>
+				<input name="password" id="basic_password" type="text" placeholder="パスワードを入力してください" />
+				<div></div>
+			</div>
+			<div id="d">
+				<p id="tit">年齢</p>
+				<input name="age" id="basic_age" type="text" placeholder="年齢を入力してください" />
+				<div></div>
+			</div>
+			<div id="e">
+				<p id="tit">住所</p>
+				<input name="address" id="address" type="text" placeholder="住所を入力してください" />
+				<div></div>
+			</div>
+			
+			<button type="submit" id="button" style="margin-top: 20px;">送信</button>
+		</div>
+	</form>
+</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
