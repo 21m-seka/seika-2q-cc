@@ -191,5 +191,6 @@ function rangeeee2() {
 document.getElementById('range1').onchange = rangeeee1;
 document.getElementById('range2').onchange = rangeeee2;
 
+
 rangeeee1();
 rangeeee2();
