@@ -183,12 +183,12 @@ function rangeeee1() {
 	range1 = document.getElementById('range1').value;
 	document.getElementById('rangeres1').innerHTML = range1 + 'px';
 }
-document.getElementById('range1').onchange = rangeeee1;
 
 function rangeeee2() {
 	range2 = document.getElementById('range2').value;
 	document.getElementById('rangeres2').innerHTML = range2 + 'px';
 }
+document.getElementById('range1').onchange = rangeeee1;
 document.getElementById('range2').onchange = rangeeee2;
 
 rangeeee1();
