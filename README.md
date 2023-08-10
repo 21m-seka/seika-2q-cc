@@ -11,7 +11,7 @@ npm run build
 npm run browser-sync
 ```
 
-### 動作
+##  動作
 
 1. 文字列を入力する（URL等）
 2. ジェネレートと書かれたボタンを押す
