@@ -2,10 +2,9 @@ document.getElementById("download1").download = "QR.png"
 document.getElementById("download2").download = "QR.png"
 document.getElementById('range1').value = 200;
 document.getElementById('range2').value = 200;
-rangeeee1();
-rangeeee2();
 let range1 = document.getElementById('range1').value;
 let range2 = document.getElementById('range2').value;
+let iconcrs;
 
 let tubtrg = 0;
 
@@ -108,7 +107,7 @@ function puticon () {
 			console.log(`<img src="${canvas.toDataURL()}" />`);
 
 		};
-		icon.src = './unknown.png';  // 上に載せる画像	
+		icon.src = './Unknown.png';  // 上に載せる画像	
 	});
 
 	document.getElementById("download2").style.display ="block";
@@ -160,10 +159,10 @@ function tubchange() {
 		tub1.classList.add("tub");
 		tub1.classList.remove("tub-unactive");
 
-		menu1.classList.add("actuvemenu");
+		menu1.classList.add("activemenu");
 		menu1.classList.remove("unactivemenu");
 		menu2.classList.add("unactivemenu");
-		menu2.classList.remove("actuvemenu");
+		menu2.classList.remove("activemenu");
 	}
 
 	if (tubtrg == 2 &&tub2.classList.contains('tub-unactive')) {
@@ -172,10 +171,10 @@ function tubchange() {
 		tub2.classList.add("tub");
 		tub2.classList.remove("tub-unactive");
 
-		menu2.classList.add("actuvemenu");
+		menu2.classList.add("activemenu");
 		menu2.classList.remove("unactivemenu");
 		menu1.classList.add("unactivemenu");
-		menu1.classList.remove("actuvemenu");
+		menu1.classList.remove("activemenu");
 	
 	}
 }
@@ -193,9 +192,5 @@ function rangeeee2() {
 }
 document.getElementById('range2').onchange = rangeeee2;
 
-
-function filetest() {
-	
-}
-
-document.getElementById('filetrance').onclick = filetest;
+rangeeee1();
+rangeeee2();
