@@ -8,7 +8,6 @@ let iconcrs;
 
 let tubtrg = 0;
 
-
 function jenerate() {
 
 	if (document.getElementById('input1').value.length == 0) {
